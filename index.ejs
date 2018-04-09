@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="/home/bob/Desktop/nixon_marcus_set008101_coursework1-master/rot13.css"> 
+<title style ="text-align:center;background-color:Pink;color:Blue">My Blog Site</title> 
+</head>
+<h1 style ="text-align:center;background-color:cyan;color:white"> Welcome To My Blog</h1> 
+<body style ="text-align:center;background-color:cyan;color:white">
+<p style ="text-align:right;background-color:cyan;color:white">
+Current blog posts</p>
+  <ul style ="text-align:right;background-color:cyan;color:white" class="quotes">
+  <% for(var i=0; i<quotes.length; i++) {%>
+    <li class="quote">
+      <span><%= quotes[i].name %></span>
+      <span><%= quotes[i].quote %></span>
+    </li>
+  <% } %>
+  </ul>
+<p style ="text-align:left;background-color:cyan;color:white">
+Add new blog post.</p>
+  <form style ="text-align:left;background-color:cyan;color:white" action="/quotes" method="POST">
+    <input type="text" placeholder="Name" name="name">
+    <input type="text" style ="height:220px;width:220px" placeholder="Post" name="quote">
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
